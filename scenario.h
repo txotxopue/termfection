@@ -7,22 +7,22 @@
 class Scenario
 {
     Dimension _dimension;
-    char _map[];
+    char _map[400];
     
     ////// Singleton stuff
     // Private Constructor
-    Scenario();
+    //Scenario();
     // Stop the compiler generating methods of copy the object
-    Scenario(Scenario const& copy);            // Not Implemented
-    Scenario& operator=(Scenario const& copy); // Not Implemented
+    //Scenario(Scenario const& copy);            // Not Implemented
+    //Scenario& operator=(Scenario const& copy); // Not Implemented
 public:
     // Initialise scenario (allocate and load map?)
-    //Scenario();
+    Scenario();
     // Clear scenario (free map memory?)
-    //~Scenario();
+    ~Scenario();
     
     // Gets the singleton instance
-    static Scenario& getInstance();
+    //static Scenario& getInstance();
     
     // Get map chunk visible from camera position given certain screen dimensions
     void getMapChunk(Vector2 pCameraPosition, Dimension pDimension, char* outMap);
